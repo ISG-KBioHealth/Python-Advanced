@@ -1,0 +1,73 @@
+{
+    "name": "Advanced Python Course",
+    "image": "mcr.microsoft.com/devcontainers/python:1-3.12-bullseye",
+    
+    "features": {
+        "ghcr.io/devcontainers/features/common-utils:2": {
+            "installZsh": true,
+            "configureZshAsDefaultShell": true,
+            "installOhMyZsh": true,
+            "upgradePackages": true,
+            "username": "automatic",
+            "userUid": "automatic",
+            "userGid": "automatic"
+        },
+        "ghcr.io/devcontainers/features/git:1": {
+            "ppa": true,
+            "version": "os-provided"
+        },
+        "ghcr.io/astral-sh/uv/uv:latest": {}
+    },
+    
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-python.python",
+                "ms-python.vscode-pylance",
+                "ms-python.black-formatter",
+                "ms-toolsai.jupyter",
+                "ms-toolsai.jupyter-keymap",
+                "ms-toolsai.jupyter-renderers",
+                "ms-toolsai.vscode-jupyter-cell-tags",
+                "ms-toolsai.vscode-jupyter-slideshow",
+                "redhat.vscode-yaml",
+                "ms-vscode.vscode-json"
+            ],
+            "settings": {
+                "python.defaultInterpreterPath": "${containerWorkspaceFolder}/.venv/bin/python",
+                "python.linting.enabled": true,
+                "python.linting.pylintEnabled": false,
+                "python.linting.flake8Enabled": true,
+                "python.formatting.provider": "black",
+                "python.formatting.blackPath": "/usr/local/py-utils/bin/black",
+                "python.linting.flake8Path": "/usr/local/py-utils/bin/flake8",
+                "jupyter.askForKernelRestart": false,
+                "jupyter.alwaysTrustNotebooks": true,
+                "files.associations": {
+                    "*.md": "markdown"
+                }
+            }
+        }
+    },
+    
+    "postCreateCommand": "uv venv .venv && echo 'source .venv/bin/activate' >> ~/.bashrc && echo 'source .venv/bin/activate' >> ~/.zshrc && source .venv/bin/activate && uv pip install -r requirements.txt",
+    
+    "remoteUser": "vscode",
+    
+    "mounts": [
+        "source=${localWorkspaceFolder}/.env,target=${containerWorkspaceFolder}/.env,type=bind,consistency=cached"
+    ],
+    
+    "forwardPorts": [8888, 8000],
+    
+    "portsAttributes": {
+        "8888": {
+            "label": "Jupyter Lab",
+            "onAutoForward": "notify"
+        },
+        "8000": {
+            "label": "Development Server",
+            "onAutoForward": "silent"
+        }
+    }
+}
