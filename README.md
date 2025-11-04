@@ -59,7 +59,7 @@ Python에서 에러 처리와 예외 관리를 학습합니다:
 - 컨텍스트 매니저와 with 문
 
 ### API Development
-**파일**: `API/28_API.md`
+**파일**: `API/API.md`
 
 Python으로 API를 다루는 방법을 학습합니다:
 - HTTP 요청의 기본 개념 (GET, POST, PUT, DELETE)
@@ -70,11 +70,11 @@ Python으로 API를 다루는 방법을 학습합니다:
 - REST API 설계 원칙
 
 ### Pydantic 데이터 검증
-**파일**: `Pydantic/pydantic_practice.ipynb`, `Pydantic/huggingface_practice.ipynb`
+**파일**: `Pydantic/1_pydantic_practice.ipynb`, `Pydantic/2_huggingface_practice.ipynb`
 
 현대적인 데이터 검증과 파싱을 학습합니다:
 
-**pydantic_practice.ipynb**:
+**1_pydantic_practice.ipynb**:
 - BaseModel을 사용한 데이터 모델 정의
 - 타입 힌트와 자동 검증
 - Field를 사용한 제약 조건 설정
@@ -83,15 +83,24 @@ Python으로 API를 다루는 방법을 학습합니다:
 - JSON 직렬화/역직렬화
 - 생물정보학 데이터 모델링 실습 (RNA-seq 데이터)
 
-**huggingface_practice.ipynb**:
+**2_huggingface_practice.ipynb**:
 - HuggingFace API와 Pydantic 통합
 - 머신러닝 모델 응답 데이터 검증
 - API 응답 구조화
 
 ## 생물정보학 실습 노트북
 
+### NCBI E-utilities 직접 활용
+**파일**: `API/1_NCBI_Eutilities_HandsOn.ipynb`
+
+HTTP 요청을 통한 NCBI 데이터베이스 직접 접근:
+- E-utilities API 엔드포인트
+- requests 라이브러리를 사용한 HTTP 요청
+- XML 및 JSON 형태의 응답 처리
+- 검색 쿼리 최적화
+
 ### Biopython과 NCBI 데이터베이스
-**파일**: `API/Biopython_HandsOn.ipynb`
+**파일**: `API/2_Biopython_HandsOn.ipynb`
 
 Biopython의 Entrez 모듈을 사용한 생물의학 데이터 수집:
 - NCBI E-utilities API 개요
@@ -102,15 +111,6 @@ Biopython의 Entrez 모듈을 사용한 생물의학 데이터 수집:
 - PubMed, PMC, ClinVar 데이터베이스 활용
 - XML 응답 파싱과 데이터 구조화
 - 대용량 데이터셋 생성 실습
-
-### NCBI E-utilities 직접 활용
-**파일**: `API/NCBI_Eutilities_HandsOn.ipynb`
-
-HTTP 요청을 통한 NCBI 데이터베이스 직접 접근:
-- E-utilities API 엔드포인트
-- requests 라이브러리를 사용한 HTTP 요청
-- XML 및 JSON 형태의 응답 처리
-- 검색 쿼리 최적화
 
 ## 개발 환경 설정
 
