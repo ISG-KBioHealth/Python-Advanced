@@ -26,8 +26,6 @@ ipykernel>=6.20.0
 ipywidgets>=8.0.0
 
 # Data Visualization (commonly used with bioinformatics)
-matplotlib>=3.6.0
-seaborn>=0.12.0
 
 # Development and Code Quality
 black>=23.0.0

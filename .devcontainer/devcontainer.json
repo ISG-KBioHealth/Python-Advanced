@@ -49,7 +49,7 @@
         }
     },
     
-    "postCreateCommand": "curl -LsSf https://astral.sh/uv/install.sh | sh && source ~/.cargo/env && uv venv .venv && echo 'source .venv/bin/activate' >> ~/.bashrc && echo 'source .venv/bin/activate' >> ~/.zshrc && source .venv/bin/activate && uv pip install -r requirements.txt",
+    "postCreateCommand": "bash -c 'curl -LsSf https://astral.sh/uv/install.sh | sh && source ~/.cargo/env && uv venv .venv && echo \"source .venv/bin/activate\" >> ~/.bashrc && echo \"source .venv/bin/activate\" >> ~/.zshrc && source .venv/bin/activate && uv pip install -r requirements.txt'",
     
     "remoteUser": "vscode",
     
