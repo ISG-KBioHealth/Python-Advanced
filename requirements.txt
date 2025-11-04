@@ -3,10 +3,12 @@
 # Data Analysis and Scientific Computing
 pandas>=2.0.0
 numpy>=1.24.0
+pip
 
 # Data Validation and Parsing
 pydantic>=2.0.0
-
+huggingface
+huggingface_hub
 # Bioinformatics
 biopython>=1.80
 

@@ -15,8 +15,7 @@
         "ghcr.io/devcontainers/features/git:1": {
             "ppa": true,
             "version": "os-provided"
-        },
-        "ghcr.io/astral-sh/uv/uv:latest": {}
+        }
     },
     
     "customizations": {
@@ -50,7 +49,7 @@
         }
     },
     
-    "postCreateCommand": "uv venv .venv && echo 'source .venv/bin/activate' >> ~/.bashrc && echo 'source .venv/bin/activate' >> ~/.zshrc && source .venv/bin/activate && uv pip install -r requirements.txt",
+    "postCreateCommand": "curl -LsSf https://astral.sh/uv/install.sh | sh && source ~/.cargo/env && uv venv .venv && echo 'source .venv/bin/activate' >> ~/.bashrc && echo 'source .venv/bin/activate' >> ~/.zshrc && source .venv/bin/activate && uv pip install -r requirements.txt",
     
     "remoteUser": "vscode",
     
