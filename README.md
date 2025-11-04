@@ -1,6 +1,10 @@
-# 고급 Python 과정
+# 중급 Python 과정
 
-중급에서 고급 Python 개발자를 위한 핵심 주제들을 다루는 프로그래밍 과정 자료입니다.
+어디에서나 쓰일 수 있는 API의 개념과 python의 requests 모듈,   
+바이오 도메인에서 많이 쓰이는 NCBI E-utilities와 Biopython,  
+Python을 활용해 데이터 및 AI 프로젝트를 하게 되면서 많이 접하게 되는 Pydantic과  
+LLM을 편리하게 이용할 수 있게 해주는 Huggingface까지,  
+AI와 바이오 분야에 관심 있는 분들을 위한 패키지들을 총망라한 과정입니다.  
 
 ## GitHub Codespaces 환경 설정
 
@@ -27,36 +31,6 @@ Python 객체지향 프로그래밍의 핵심 개념을 다룹니다:
 - 클래스 변수 vs 인스턴스 변수
 - 정적 메서드와 클래스 메서드
 - 프로퍼티와 게터/세터
-
-### Decorators
-**파일**: `Decorators/14_higher_order_functions.md`
-
-함수형 프로그래밍 개념과 데코레이터 패턴을 학습합니다:
-- 함수를 인자로 받는 고차함수
-- 클로저의 개념과 활용
-- 기본 데코레이터 작성법
-- 매개변수를 받는 데코레이터
-- 클래스 데코레이터
-- functools.wraps 사용법
-- 실제 사용 사례 (로깅, 타이밍, 캐싱)
-
-### Exception Handling
-**파일**: `Exception_Handling/15_python_type_errors.md`, `Exception_Handling/17_exception_handling.md`
-
-Python에서 에러 처리와 예외 관리를 학습합니다:
-
-**15_python_type_errors.md**:
-- Python의 주요 에러 타입들
-- TypeError, ValueError, KeyError 등
-- 에러 메시지 해석 방법
-- 스택 트레이스 읽기
-
-**17_exception_handling.md**:
-- try-except-finally 블록
-- 여러 예외 처리
-- 사용자 정의 예외 클래스
-- 예외 체이닝
-- 컨텍스트 매니저와 with 문
 
 ### API Development
 **파일**: `API/API.md`
